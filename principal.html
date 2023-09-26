@@ -1,0 +1,70 @@
+<html lang="pt-br">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="principal_estilo.css"
+        rel="stylesheet">
+        <title>Cinema</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">CINE UP</label>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Snack Bar</a></li>
+            <li><a href="#">Em cartaz</a></li>
+            <li><a href="#">Em breve</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="slider" data-bs-ride="true">
+
+        <div class="slides">
+        <!--botoes-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        <!--Fim botoes-->
+
+        <!--Imagens Carrossel-->
+            <div class="slide first">
+                <img src="assets/Slides/blade_runner.jpg" alt="Imagem 1" id="slide"/>
+            </div>
+            <div class="slide">
+                <img src="assets/Slides/doctor_strange.jpg" alt="Imagem 2" id="slide"/>
+            </div>
+            <div class="slide">
+                <img src="assets/Slides/drive.jpg" alt="Imagem 3" id="slide"/>
+            </div>
+            <div class="slide">
+                <img src="assets/Slides/interestellar.jpg" alt="Imagem 4" id="slide"/>
+            </div>
+        <!--Fim imagens-->
+
+        <!--Auto nav-->
+            <div class="auto-nav">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+
+        <div class="manual-nav">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script src="slide_script.js"></script>
+</body>
+</html>
