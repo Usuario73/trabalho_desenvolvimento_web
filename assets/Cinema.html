@@ -1,0 +1,107 @@
+
+<!-- saved from url=(0037)http://127.0.0.1:5500/principal.html# -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./Cinema_files/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Cinema_files/principal_estilo.css" rel="stylesheet">
+        <title>Cinema</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">CINE UP</label>
+        <ul class="nav_links">
+            <li><a href="http://127.0.0.1:5500/principal.html#">Início</a></li>
+            <li><a href="http://127.0.0.1:5500/principal.html#">Snack Bar</a></li>
+            <li><a href="http://127.0.0.1:5500/principal.html#">Em cartaz</a></li>
+            <li><a href="http://127.0.0.1:5500/principal.html#">Em breve</a></li>
+        </ul>
+    </nav>
+    
+    <div class="slider">
+
+        <div class="slides">
+        <!--botoes-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        <!--Fim botoes-->
+
+        <!--Imagens Carrossel-->
+            <div class="slide first">
+                <img src="./Cinema_files/blade_runner.jpg" alt="Imagem 1" id="slide">
+            </div>
+            <div class="slide">
+                <img src="./Cinema_files/doctor_strange.jpg" alt="Imagem 2" id="slide">
+            </div>
+            <div class="slide">
+                <img src="./Cinema_files/drive.jpg" alt="Imagem 3" id="slide">
+            </div>
+            <div class="slide">
+                <img src="./Cinema_files/interestellar.jpg" alt="Imagem 4" id="slide">
+            </div>
+        <!--Fim imagens-->
+
+        <!--Auto nav-->
+            <div class="auto-nav">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+
+        <div class="manual-nav">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script src="./Cinema_files/slide_script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

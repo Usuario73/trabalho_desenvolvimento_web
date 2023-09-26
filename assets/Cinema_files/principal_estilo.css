@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+}
+nav{
+    background: rgb(164, 73, 73);
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+nav ul{
+    float:right;
+    margin-right: 35px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 35px;
+}
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color: red;
+    transition: .6s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.slider{
+    margin:0px auto;
+    width: 800px;
+    height: 500px; 
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.manual-nav{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .6s;
+}
+.manual-btn:not(last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: white;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.auto-nav div{
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .6s;
+}
+.auto-nav{
+    position: absolute;
+    width: 760px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+
+}
+.auto-nav div:not(:Last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .auto-nav .auto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .auto-nav .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .auto-nav .auto-btn3{
+    background-color: white;
+}
+#radio4:checked ~ .auto-nav .auto-btn4{
+    background-color: white;
+}
