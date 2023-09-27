@@ -1,0 +1,85 @@
+/* Estilo geral para a página */
+body {
+    font-family: 'Roboto';
+    background: rgb(20, 20, 20);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilo para o título da página */
+h1 {
+    font-size: 24px;
+}
+
+/* Container para os filmes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo para cada filme */
+.filme {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px; /* Largura máxima do filme */
+}
+
+.filme:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para a imagem do filme com o tamanho da imagem de exemplo */
+.filme_1 img {
+    width: 300px; /* Largura desejada */
+    height: 450px; /* Altura desejada */
+    border: 2px solid #333;
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+/* Estilo para o título do filme */
+.filme h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilo para a descrição do filme */
+.filme p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilo para o link de compra de ingressos */
+.filme a {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.filme a:hover {
+    background-color: #555;
+}
