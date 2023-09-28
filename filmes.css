@@ -6,55 +6,59 @@ body {
     padding: 0;
 }
 
+
 /* Estilo para o cabeçalho */
 header {
     background-color: black;
     color: #fff;
+    font-family: 'Roboto';
+    font-size: 40px;
+    line-height: 40px;
     text-align: center;
     padding: 20px 0;
 }
 
+
 /* Estilo para o título da página */
 h1 {
-    font-size: 24px;
+    font-size: 40px;
 }
 
 /* Container para os filmes */
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* Espaço uniforme entre os filmes */
+    align-content: flex-start; /* Alinhar no início da linha */
 }
 
 /* Estilo para cada filme */
 .filme {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
+    background-color: black;
+    margin: 1.5cm; /* Espaçamento entre os filmes (3 cm) */
+    padding: 0; /* Remova o preenchimento */
+    border: 1px solid red;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    max-width: 300px; /* Largura máxima do filme */
+    max-width: calc(33.33% - 3cm); /* Largura máxima do filme com margem */
+    box-sizing: border-box; /* Inclui margem e padding na largura */
+    color: red; /* Cor do texto em vermelho */
+    font-family: 'Roboto'; /* Mesma fonte do resto do site */
 }
+
+/* Estilo para a imagem do filme */
+.filme img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
 
 .filme:hover {
     transform: scale(1.05);
 }
-
-/* Estilo para a imagem do filme com o tamanho da imagem de exemplo */
-.filme_1 img {
-    width: 300px; /* Largura desejada */
-    height: 450px; /* Altura desejada */
-    border: 2px solid #333;
-    display: block;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
 
 /* Estilo para o título do filme */
 .filme h2 {
@@ -82,4 +86,18 @@ h1 {
 
 .filme a:hover {
     background-color: #555;
+}
+
+/* Estilo para a imagem do filme com o tamanho da imagem de exemplo */
+.filme img {
+    width: 300px; /* Largura desejada */
+    height: 450px; /* Altura desejada */
+    border: 2px solid #333;
+}
+
+/* Crie uma grade com 3 colunas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    gap: 20px; /* Espaço entre as colunas */
 }
