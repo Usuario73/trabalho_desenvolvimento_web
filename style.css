@@ -2,10 +2,18 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: gray;
+    color: black;
+    font-family: 'Roboto';
 }
 
 h1 {
-    color: #333;
+    color: #fff; /* Texto do cabeçalho em branco */
+    font-size: 40px;
+    line-height: 80px;
+    font-family: 'Roboto';
+    background-color: black; /* Fundo do cabeçalho em preto */
+    padding: 10px; /* Adiciona um pouco de espaço interno ao cabeçalho */
 }
 
 .seat-map {
@@ -14,11 +22,17 @@ h1 {
     justify-content: center;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+}
+
 .seat {
     width: 50px;
     height: 50px;
     margin: 10px;
-    background-color: #ccc;
+    font-family: 'Roboto';
+    background-color: green;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -27,18 +41,18 @@ h1 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: black; 
 }
 
 .selected {
-    background-color: #00aaff;
+    background-color:  red;
     color: #fff;
 }
 
-#buy-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.corridor {
+    width: 50px; /* Largura igual à das poltronas */
+    height: 50px; /* Altura igual à das poltronas */
+    margin: 10px;
+    border: none; /* Remove a borda do corredor */
+    background-color: transparent; /* Cor transparente para o corredor */
 }
