@@ -7,7 +7,6 @@ body {
 }
 
 
-/* Estilo para o cabeçalho */
 header {
     background-color: black;
     color: #fff;
@@ -21,7 +20,7 @@ header {
 
 /* Estilo para o título da página */
 h1 {
-    font-size: 40px;
+    font-size: 26px;
 }
 
 /* Container para os filmes */
@@ -30,29 +29,33 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between; /* Espaço uniforme entre os filmes */
     align-content: flex-start; /* Alinhar no início da linha */
+
+    
+    
 }
 
 /* Estilo para cada filme */
 .filme {
+    max-width: calc(100% - 2cm);
     background-color: black;
     margin: 1.5cm; /* Espaçamento entre os filmes (3 cm) */
     padding: 0; /* Remova o preenchimento */
     border: 1px solid red;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    max-width: calc(33.33% - 3cm); /* Largura máxima do filme com margem */
-    box-sizing: border-box; /* Inclui margem e padding na largura */
-    color: red; /* Cor do texto em vermelho */
+    transition: transform 0.3s ease-in-out;/* Inclui margem e padding na largura */
+    color: red;
     font-family: 'Roboto'; /* Mesma fonte do resto do site */
+
 }
 
 /* Estilo para a imagem do filme */
 .filme img {
-    width: 100%;
-    height: 100%;
+    width: 100% auto;
+    height: 100% auto;
     object-fit: cover;
     border: 2px solid #333;
+
 }
 
 
@@ -75,7 +78,7 @@ h1 {
 /* Estilo para o link de compra de ingressos */
 .filme a {
     display: block;
-    background-color: #333;
+    background-color: green;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -85,7 +88,7 @@ h1 {
 }
 
 .filme a:hover {
-    background-color: #555;
+    background-color: red;
 }
 
 /* Estilo para a imagem do filme com o tamanho da imagem de exemplo */
@@ -101,3 +104,44 @@ h1 {
     grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
     gap: 20px; /* Espaço entre as colunas */
 }
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Defina aqui os estilos específicos para dispositivos móveis */
+    body {
+        font-size: 16px; /* Tamanho de fonte menor para telas menores */
+    }
+
+    .container {
+        flex-direction: column; /* Alinhar os filmes verticalmente */
+    }
+
+    .filme {
+        max-width: 100%; /* Largura máxima de 100% para ocupar toda a largura da tela */
+        margin: 1rem 0; /* Espaçamento entre os filmes para dispositivos móveis */
+    }
+
+    .filme img {
+        width: 100%; /* Imagens ocupam 100% da largura do contêiner */
+        height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura igual para dispositivos menores */
+        gap: 10px; /* Espaço menor entre as colunas para dispositivos menores */
+    }
+
+    .filme a {
+        padding: 8px 16px; /* Reduza o preenchimento para dispositivos menores */
+        font-size: 14px; /* Reduza o tamanho da fonte para dispositivos menores */
+    }
+
+    /* Adicione mais estilos específicos para dispositivos móveis conforme necessário */
+}
+
+
+
+
+
+
+   
