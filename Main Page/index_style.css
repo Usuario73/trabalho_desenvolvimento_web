@@ -1,0 +1,372 @@
+/* Definir margens padrão do documento */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Essa propriedade define altura e largura dos elementos, levando em conta seu conteúdo */
+}
+
+body{
+    height: 100%;
+    background: rgb(20, 20, 20);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Ajustar propriedades do nav */
+header{
+  position: -webkit-sticky; /* Necessário para funcionar no Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex; /* Layout flexível que se ajusta em linhas e colunas, preenchendo todo o espaço disponível */
+    align-items: center; /* Centraliza objetos no meio */
+    justify-content: space-between; /* Distancia objetos proporcionalmente */
+    
+}
+label.logo{
+    color: white;
+    font-size: 40px;
+    margin-left: 40px;
+    width: 220px;
+    float: left;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+    
+}
+nav ul li{
+    display: inline-block; /* Organiza o conteúdo dos links em linha e em blocos, podendo alterar distância entre eles */
+    margin: 0 40px;
+}
+nav ul li a{
+    color: white;
+    font-weight: normal;
+    font-size: 25px;
+}
+nav ul li a:hover{ /* Hover acontece quando o mouse é passado em cima */
+    color: red;
+    transition: .6s; /* Leva 0.6 segundo para transiocionar para vermelho */
+    cursor: pointer; /* Troca o cursor para pointer, indicando que é possível clicar */
+}
+
+
+/* Aba de navegação, criei para quando a tela ficar menor, podendo ajustar o conteudo da navbar */
+
+.checkbtn{ /* Contém as FA BARS importadas de um script */
+    font-size: 40px;
+    float: right;
+    color: white;
+    line-height: 80px;
+    margin-top: 5px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none; /* Não aparecem por default, habilito ela após x pixels */
+}
+#check{
+    display: none; /* Desabilito sempre a checkbox, a função dela ja está inclusa nas FA BARS */
+}
+
+
+
+/* Slideshow da W3SCHOOLS, fiz pequenas alterações para cumprir a proposta do cinema */
+
+.slideshow-container { /* Define o tamanho da box do slideshow */
+  max-width: 1000px; /* Tamanho da box */
+  position: relative; /* Para ajustar o top,left,bottom e right da página */
+  margin: auto; /* Ajusta a margem automaticamente quando reduz a página */ 
+}
+img{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Sessões de filme da página principal */
+
+.Sessao-em-cartaz{
+  max-width: 1000px;
+  margin-top: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Sessao-em-cartaz h3{
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+.filmes_em_cartaz{
+  margin-top: 40px;
+  display: grid;
+  grid-auto-flow: column; 
+  grid-auto-columns: 18%; 
+  grid-gap: 40px;
+  overflow-x:scroll;
+}
+
+
+#filmes_cartaz::before{
+  background-color: red;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .0;
+  transition: .5s ease;
+  display: block;
+}
+#filmes_cartaz:hover::before{
+  opacity: .85;
+  transition: .5s ease;
+}
+.filmes_em_cartaz .filme_cartaz_1:hover .nome_filme,
+.filmes_em_cartaz .filme_cartaz_2:hover .nome_filme,
+.filmes_em_cartaz .filme_cartaz_3:hover .nome_filme,
+.filmes_em_cartaz .filme_cartaz_4:hover .nome_filme,
+.filmes_em_cartaz .filme_cartaz_5:hover .nome_filme,
+.filmes_em_cartaz .filme_cartaz_6:hover .nome_filme {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.nome_filme{
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  padding-top: 40%;
+  opacity: 0;
+}
+
+#filmes_cartaz{
+  border: 2px solid white;
+  background-color: rgb(36, 32, 32);
+  position: relative;
+  margin-bottom: 5px;
+}
+#filmes_cartaz img{
+  object-fit: cover;
+  height: 85%;
+  margin-bottom: 3px;
+}
+
+#filmes_cartaz:hover{
+  cursor: pointer;
+}
+.tag_indicativa{
+  margin-left: 3%;
+}
+.tag_indicativa img{
+  width: 30px;
+  height: 30px;
+}
+#Em-breve{
+  margin-top: 50px;
+}
+@media (max-width:1000px) {
+    body{
+        background: rgb(20, 20, 20);
+    }
+    .checkbtn{
+        display: inline;
+    }
+
+    nav ul{
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        transition: all .6s;
+        text-align: center;
+        padding-top: 40px ;
+    }
+    nav ul li{
+        display:block;
+        padding-top: 30px;
+    }
+    nav ul li a{
+        font-size: 40px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    img{
+      height: auto;
+      max-height: 500px;
+    }
+}
+@media (max-width:800px){
+
+  
+
+  .Sessao-em-cartaz{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    margin: auto;
+  }
+  .Sessao-em-cartaz h3{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+  }
+  .filmes_em_cartaz{
+    margin-top: 40px;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-auto-columns: 50%; 
+    grid-gap: 10px;
+    overflow-x: auto;
+  }
+  #filmes_cartaz::before{
+    background-color: red;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .0;
+    transition: .5s ease;
+    display: block;
+  }
+  #filmes_cartaz:hover::before{
+    opacity: .85;
+    transition: .5s ease;
+  }
+  .filmes_em_cartaz .filme_cartaz_1:hover .nome_filme,
+  .filmes_em_cartaz .filme_cartaz_2:hover .nome_filme,
+  .filmes_em_cartaz .filme_cartaz_3:hover .nome_filme,
+  .filmes_em_cartaz .filme_cartaz_4:hover .nome_filme,
+  .filmes_em_cartaz .filme_cartaz_5:hover .nome_filme,
+  .filmes_em_cartaz .filme_cartaz_6:hover .nome_filme {
+    opacity: 1;
+    transition: .5s ease;
+  }
+  
+  .nome_filme{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    padding-top: 30%;
+    padding: 10%
+    opacity: 0;
+  }
+  
+  #filmes_cartaz{
+    border: 2px solid white;
+    background-color: rgb(36, 32, 32);
+    position: relative;
+  }
+  #filmes_cartaz img{
+    object-fit: cover;
+    height: 85%;
+    margin-bottom: 3px;
+  }
+  
+  #filmes_cartaz:hover{
+    cursor: pointer;
+  }
+  .tag_indicativa{
+    margin-left: 3%;
+  }
+  .tag_indicativa img{
+    width: 30px;
+    height: 30px;
+  }
+  #Em-breve{
+    margin-top: 50px;
+  }
+}
+
+
+
+
