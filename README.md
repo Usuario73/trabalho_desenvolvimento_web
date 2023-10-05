@@ -7,7 +7,7 @@ Este é um projeto de uma aplicação web para reserva de assentos em um cinema.
 ## Arquivos
 
 ### `index.html`
-O arquivo principal da aplicação, que contém a estrutura HTML da página inicial. Ele inclui uma barra de navegação e um carrossel de imagens na parte superior da página, além de uma seção de disposição dos assentos.
+O arquivo da aplicação que contém o sistema de bilheteria.
 
 ### `embreve.html`
 Esta página contém informações sobre os filmes que estarão em breve no cinema. Os detalhes dos filmes e suas datas de lançamento são exibidos aqui.
