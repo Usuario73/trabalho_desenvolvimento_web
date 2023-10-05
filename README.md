@@ -1,49 +1,68 @@
-# trabalho_desenvolvimento_web
+# Cinema Web App
 
-# Sistema de Bilheteria
+## Descrição
+Este é um projeto de uma aplicação web para reserva de assentos em um cinema. A aplicação permite aos usuários visualizar a disposição dos assentos no cinema e selecionar os assentos desejados.
 
-Este é um projeto simples de um Sistema de Bilheteria que permite aos usuários selecionar assentos e comprar ingressos para um evento. O projeto é composto por um arquivo HTML, um arquivo CSS e um arquivo JavaScript.
 
-## Visão Geral
+## Arquivos
 
-O projeto consiste em uma página web que exibe um mapa de assentos e permite que os usuários selecionem os assentos desejados. Os assentos selecionados são contabilizados e exibidos na página. Quando o usuário decide comprar os ingressos, um alerta é exibido com o número de assentos comprados.
+### `index.html`
+O arquivo principal da aplicação, que contém a estrutura HTML da página inicial. Ele inclui uma barra de navegação e um carrossel de imagens na parte superior da página, além de uma seção de disposição dos assentos.
 
-## Estrutura de Arquivos
+### `embreve.html`
+Esta página contém informações sobre os filmes que estarão em breve no cinema. Os detalhes dos filmes e suas datas de lançamento são exibidos aqui.
 
-- `index.html`: O arquivo HTML principal que contém a estrutura da página.
-- `style.css`: O arquivo CSS para estilizar a página.
-- `script.js`: O arquivo JavaScript que adiciona funcionalidade à página.
+### `principal.html`
+Página principal da aplicação, que pode ser acessada a partir do menu de navegação. Pode conter informações gerais sobre o cinema, como horários de funcionamento e localização.
 
-## Como Usar
+### `filmes.html`
+Esta página exibe os filmes atualmente em cartaz no cinema. Os usuários podem selecionar os filmes e ver informações detalhadas sobre eles.
 
-1. Abra o arquivo `index.html` em seu navegador.
+### `style.css`
+O arquivo CSS principal que estiliza todas as páginas da aplicação. Define o estilo geral, cores, fontes e formatação.
 
-2. Você verá um mapa de assentos. Clique nos assentos que deseja selecionar. Os assentos selecionados serão destacados.
+### `principal_estilo.css`
+Arquivo CSS adicional responsável por estilos específicos da página principal.
 
-3. O número de assentos selecionados será exibido na parte inferior da página.
+### `filmes.css`
+Arquivo CSS adicional responsável por estilos específicos da página de filmes em cartaz.
 
-4. Clique no botão "Comprar" para ver um alerta com o número de assentos comprados.
+### `script.js`
+O arquivo JavaScript principal que controla a lógica da aplicação.
 
-## Personalização
+### `slide_script.js`
+O arquivo JavaScript responsável pelo controle do carrossel de imagens na página inicial.
 
-Você pode personalizar este projeto da seguinte maneira:
+## Instruções de Uso
+1. Abra os arquivos HTML em um navegador da web para acessar as diferentes páginas da aplicação.
+2. Navegue pelo site usando a barra de navegação para acessar diferentes seções.
+3. Na seção "Em cartaz" (em `filmes.html`), você pode visualizar a disposição dos assentos no cinema.
+4. Clique nos assentos verdes para selecioná-los e clique novamente para desselecioná-los.
+5. Observe como os assentos selecionados são destacados em vermelho.
+6. O carrossel de imagens na parte superior da página inicial alterna automaticamente as imagens a cada 3,8 segundos.
 
-- Altere o número de assentos criados no arquivo `script.js` ajustando o valor passado para a função `createSeats`.
+## Tecnologias Utilizadas
+- HTML
+- CSS
+- JavaScript
 
-- Personalize o estilo dos assentos e do mapa de assentos editando o arquivo `style.css`.
+## Autores
+- [Gabriel Araujo](https://github.com/Usuario73)
+- [Luciano Otto Rodrigues](https://github.com/Lucianoottor)
+- [Ícaro Gabriel](https://github.com/icarow1030)
 
-## Contribuição
-
-Este é um projeto simples, mas as contribuições são bem-vindas. Sinta-se à vontade para propor melhorias, correções de bugs ou adições de recursos.
 
 ## Licença
+Este projeto está sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
 
-Este projeto está sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
+## Clonando o Repositório
+Para clonar este repositório e executar a aplicação em sua máquina local, siga as etapas abaixo:
 
-## Autor
+1. Abra o terminal ou prompt de comando em seu computador.
 
-[USUARIO__73]
+2. Navegue até o diretório onde deseja clonar o repositório.
 
----
+3. Use o seguinte comando para clonar o repositório:
 
-Aproveite o uso deste Sistema de Bilheteria! Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato.
+```bash
+git clone https://github.com/seu-usuario/cinema-web-app.git
