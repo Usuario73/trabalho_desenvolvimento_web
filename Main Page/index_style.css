@@ -40,17 +40,26 @@ nav ul{
 }
 nav ul li{
     display: inline-block; /* Organiza o conteúdo dos links em linha e em blocos, podendo alterar distância entre eles */
+    position: relative;
     margin: 0 40px;
 }
 nav ul li a{
     color: white;
     font-weight: normal;
     font-size: 25px;
+    text-decoration: none;
 }
-nav ul li a:hover{ /* Hover acontece quando o mouse é passado em cima */
-    color: red;
-    transition: .6s; /* Leva 0.6 segundo para transiocionar para vermelho */
-    cursor: pointer; /* Troca o cursor para pointer, indicando que é possível clicar */
+nav ul li a::before{
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 15px;
+  bottom: -5px;
+  height: 3px;
+  transition: width 0.3s ease-out;
+}
+nav ul li a:hover::before{
+  width: 100%;
 }
 
 
@@ -183,6 +192,9 @@ img{
   grid-gap: 40px;
   overflow-x:scroll;
 }
+.filmes_em_cartaz a{
+  text-decoration: none;
+}
 .filmes_em_cartaz::-webkit-scrollbar {
   width: 10px;
 }
@@ -263,41 +275,7 @@ img{
 #Em-breve{
   margin-top: 50px;
 }
-@media (max-width:1000px) {
-    body{
-        background: rgb(20, 20, 20);
-    }
-    .checkbtn{
-        display: inline;
-    }
 
-    nav ul{
-        z-index: 10;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: black;
-        top: 80px;
-        left: -100%;
-        transition: all .6s;
-        text-align: center;
-        padding-top: 40px ;
-    }
-    nav ul li{
-        display:block;
-        padding-top: 30px;
-    }
-    nav ul li a{
-        font-size: 40px;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    img{
-      height: auto;
-      max-height: 500px;
-    }
-}
 @media (max-width:800px){
   .Sessao-em-cartaz{
     width: 100%;
@@ -418,7 +396,41 @@ footer{
   margin: 10px auto 10px auto;
   display: none;
 }
-@media (max-width:1000px){
+@media (max-width:1000px) {
+  .checkbtn{
+      display: inline;
+  }
+
+  nav ul{
+      z-index: 10;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      top: 80px;
+      left: -100%;
+      transition: all .6s;
+      text-align: center;
+      padding-top: 40px ;
+  }
+  nav ul li{
+      display:block;
+      padding-top: 30px;
+  }
+  nav ul li a{
+      font-size: 40px;
+  }
+  nav ul li a::before{
+    display: none;
+  }
+
+  #check:checked ~ ul{
+      left: 0;
+  }
+  img{
+    height: auto;
+    max-height: 500px;
+  }
   footer{
     width: 100%;
     height: 500px;
