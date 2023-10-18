@@ -65,7 +65,22 @@ header{
   nav ul li a:hover::before{
     width: 100%;
   }
-  
+
+  .checkbtn{ /* Contém as FA BARS importadas de um script */
+    font-size: 40px;
+    float: right;
+    color: white;
+    line-height: 80px;
+    margin-top: 5px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none; /* Não aparecem por default, habilito ela após x pixels */
+}
+#check{
+    display: none; /* Desabilito sempre a checkbox, a função dela ja está inclusa nas FA BARS */
+}
+
+
 
 .seat-map {
     display: flex;
