@@ -168,8 +168,6 @@ img{
   to {opacity: 1}
 }
 
-
-
 /* Sessões de filme da página principal */
 
 .Sessao-em-cartaz{
@@ -212,7 +210,6 @@ img{
 .filmes_em_cartaz::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 #filmes_cartaz::before{
   background-color: red;
@@ -269,86 +266,68 @@ img{
   margin-left: 3%;
 }
 .tag_indicativa img{
-  width: 30px;
+  width: 20%;
   height: 30px;
 }
 #Em-breve{
   margin-top: 50px;
 }
 
-@media (max-width:800px){
-  .Sessao-em-cartaz{
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    margin: auto;
-  }
-  .Sessao-em-cartaz h3{
-    color: white;
-    font-size: 35px;
-    text-align: center;
-  }
-  .filmes_em_cartaz{
-    margin-top: 40px;
-    display: grid;
-    grid-auto-flow: column; 
-    grid-auto-columns: 50%; 
-    grid-gap: 50px;
-    overflow-x: auto;
-  }
-  #filmes_cartaz::before{
-    background-color: red;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .0;
-    transition: .5s ease;
-    display: block;
-  }
-  #filmes_cartaz:hover::before{
-    opacity: .85;
-    transition: .5s ease;
-  }
+/* Snack Bar */
+.snack-bar {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  background-color: rgb(0, 0, 0); /* Changed background color to black */
+  padding: 20px; /* Added padding for spacing */
+  border-radius: 8px; /* Added border-radius for rounded corners */
+}
 
-  
-  .nome_filme{
-    position: absolute;
-    color: white;
-    text-align: center;
-    width: 100%;
-    font-size: 30px;
-    padding-top: 30%;
-    padding: 10%
-    opacity: 0;
-  }
-  
-  #filmes_cartaz{
-    border: 2px solid white;
-    background-color: rgb(36, 32, 32);
-    position: relative;
-  }
-  #filmes_cartaz img{
-    object-fit: cover;
-    height: 85%;
-    margin-bottom: 3px;
-  }
-  
-  #filmes_cartaz:hover{
-    cursor: pointer;
-  }
-  .tag_indicativa{
-    margin-left: 3%;
-  }
-  .tag_indicativa img{
-    width: 30px;
-    height: 30px;
-  }
-  #Em-breve{
-    margin-top: 50px;
-  }
+.snack-bar h3 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.snack-bar-imagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Added gap for spacing between images */
+}
+
+#imagens_snack {
+  background-color: rgb(36, 32, 32);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+#imagens_snack:hover {
+  cursor: pointer;
+}
+
+#imagens_snack_img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.8);
+}
+
+.legenda_snack {
+  color: white;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+}
+.legenda_snack a{
+  color: white;
+  text-decoration: none;
 }
 
 footer{
@@ -400,7 +379,6 @@ footer{
   .checkbtn{
       display: inline;
   }
-
   nav ul{
       z-index: 10;
       position: absolute;
@@ -459,7 +437,40 @@ footer{
     display: block;
   }
 }
+@media (max-width:800px){
+  .Sessao-em-cartaz{
+    margin: auto;
+  }
+  .Sessao-em-cartaz h3{
+    margin-top: 25px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
+  .filmes_em_cartaz{
+    margin-top: 30px;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-auto-columns: 40%; 
+    grid-gap: 50px;
+    overflow-x: auto;
+  }
+  .nome_filme{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: auto;
+    padding-top: 40%;
+    opacity: 0;
+  }
+  #filmes_cartaz{
+    border: 2px solid white;
+    background-color: rgb(36, 32, 32);
+    position: relative;
+  }
 
+}
 
 
 

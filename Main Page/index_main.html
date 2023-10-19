@@ -30,7 +30,7 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="/assets/Filmes_Paisagem/doctor_strange.jpg" style="width:100%">
+          <img src="/assets/Slides/doctor_strange.jpg" style="width:100%">
         </div>
       
         <div class="mySlides fade">
@@ -46,7 +46,7 @@
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <script src="autoplay_slider.js"></script>          
+        <script src="/autoplay_slider.js"></script>          
       </div>
       
       <!-- The dots/circles -->
@@ -64,42 +64,42 @@
             <a class="nome_filme" href="index.html">2001 - Odisséia no Espaço</a>
             <img src="/assets/2001.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_10.png">
+              <img src="/assets/classificacao/c_10.png">
             </div>
           </div>
           <div class="filme_cartaz_2" id="filmes_cartaz">
             <a class="nome_filme" href="index.html">Godzilla </a>
             <img src="/assets/godzilla.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_12.png">
+              <img src="/assets/classificacao/c_12.png">
             </div>
           </div>
           <div class="filme_cartaz_3" id="filmes_cartaz">
             <a class="nome_filme" href="index.html">Inception</a>
             <img src="/assets/inception.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_14.png">
+              <img src="/assets/classificacao/c_14.png">
             </div>
           </div>
           <div class="filme_cartaz_4" id="filmes_cartaz">
             <a class="nome_filme" href="index.html">Coringa</a>
             <img src="/assets/joker.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_18.png">
+              <img src="/assets/classificacao/c_18.png">
             </div>
           </div>
           <div class="filme_cartaz_5" id="filmes_cartaz">
             <a class="nome_filme" href="index.html">Mad Max - Estrada da Fúria</a>
             <img src="/assets/mad_max.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_16.png">
+              <img src="/assets/classificacao/c_16.png">
             </div>
           </div>
           <div class="filme_cartaz_6" id="filmes_cartaz">
             <a class="nome_filme" href="index.html">Senhor dos Anéis - O Retorno do Rei</a>
             <img src="/assets/lotr.jpg" style="width: 100%">
             <div class="tag_indicativa">
-              <img src="/assets/classificacao_indicativa/c_14.png">
+              <img src="/assets/classificacao/c_14.png">
             </div>
           </div>
       </div>
@@ -116,17 +116,67 @@
         });
       });
       </script>
-
+    </div>
       <!--Snack Bar-->
       <div class="snack-bar">
         <h3>Snack Bar</h3>
         <div class="snack-bar-imagens">
-          <div class="imagem-1">
-            <img src="/assets/Snack Bar/combo1.jpg">
-            <a>Combo 1</a>
+          <div class="imagem-1" id="imagens_snack">
+            <img src="/assets_2/combo1.jpg" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 1</h4>
+              <a href="/index2.html">Pipoca Média + 2 Refrigerantes 600ml</a>
+            </div>
+          </div>
+          <div class="imagem-2" id="imagens_snack">
+            <img src="/assets_2/combo2.jpg" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 2</h4>
+              <a href="/index2.html">Refrigerante 600ml + Pipoca Média</a>
+            </div>
+          </div>
+          <div class="imagem-3" id="imagens_snack">
+            <img src="/assets_2/pipoca (1).png" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 1</h4>
+              <a href="/index2.html">Refrigerante 600ml + Pipoca Média</a>
+            </div>
+          </div>
+          <div class="imagem-4" id="imagens_snack">
+            <img src="/assets_2/pipoca (1).png" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 1</h4>
+              <a href="/index2.html">Pipoca Média + 2 Refrigerantes 600ml</a>
+            </div>
+          </div>
+          <div class="imagem-5" id="imagens_snack">
+            <img src="/assets_2/pipoca (1).png" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 1</h4>
+              <a href="/index2.html">Pipoca Média + 2 Refrigerantes 600ml</a>
+            </div>
+          </div>
+          <div class="imagem-6" id="imagens_snack">
+            <img src="/assets_2/pipoca (1).png" id="imagens_snack_img">
+            <div class="legenda_snack">
+              <h4>Combo 1</h4>
+              <a href="/index2.html">Pipoca Média + 2 Refrigerantes 600ml</a>
+            </div>
           </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.imagem-1, .imagem-2, .imagem-3, .imagem-4, .imagem-5, .imagem-6').click(function(){
+              var href = $(this).find('.legenda_snack a').attr('href');
+              if (href) {
+                window.location.href = href;
+              }
+            });
+          });
+          </script>
       </div>
+      <!--Em Breve-->
       <div class="Sessao-em-cartaz" id="Em-breve">
         <h3>Em Breve</h3>
         <div class="filmes_em_cartaz">
@@ -134,47 +184,46 @@
                <a class="nome_filme" href="index.html">Jurassic Park</a>
               <img src="/assets/jurassic_park.jpg" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_L.png">
+                <img src="/assets/classificacao/c_L.png">
               </div>
             </div>
             <div class="filme_cartaz_2" id="filmes_cartaz">
               <a class="nome_filme" href="index.html">O Iluminado</a>
-              <img src="/assets/Filmes_Retrato/The Shining.jpeg" style="width: 100%">
+              <img src="/assets/The Shining.jpeg" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_16.png">
+                <img src="/assets/classificacao/c_16.png">
               </div>
             </div>
             <div class="filme_cartaz_3" id="filmes_cartaz">
               <a class="nome_filme" href="index.html">O Silêncio dos Inocentes</a>
-              <img src="/assets/Filmes_Retrato/silence_lambs.png" style="width: 100%">
+              <img src="/assets/silence_lambs.png" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_18.png">
+                <img src="/assets/classificacao/c_18.png">
               </div>
             </div>
             <div class="filme_cartaz_4" id="filmes_cartaz">
               <a class="nome_filme" href="index.html">Tudo em Todo Lugar ao Mesmo Tempo</a>
-              <img src="/assets/Filmes_Retrato/everything_once.jpeg" style="width: 100%">
+              <img src="/assets/everything_once.jpeg" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_14.png">
+                <img src="/assets/classificacao/c_14.png">
               </div>
             </div>
             <div class="filme_cartaz_5" id="filmes_cartaz">
               <a class="nome_filme" href="index.html">La La Land</a>
-              <img src="/assets/Filmes_Retrato/LaLa_land.jpeg" style="width: 100%">
+              <img src="/assets/LaLa_land.jpeg" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_12.png">
+                <img src="/assets/classificacao/c_12.png">
               </div>
             </div>
             <div class="filme_cartaz_6" id="filmes_cartaz">
               <a class="nome_filme" href="index.html">Kill Bill</a>
-              <img src="/assets/Filmes_Retrato/kill_bill.jpeg" style="width: 100%">
+              <img src="/assets/kill_bill.jpeg" style="width: 100%">
               <div class="tag_indicativa">
-                <img src="/assets/classificacao_indicativa/c_18.png">
+                <img src="/assets/classificacao/c_18.png">
               </div>
             </div>
         </div>
     </div>
-  </div>
   <footer>
       <div class="footer_nav">
         <label class="logo" id="logo_navbar">CINE <span class="span">UP</span></label>
