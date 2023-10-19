@@ -94,7 +94,7 @@ img{
   object-fit: cover;
 }
 
-/* Next & previous buttons */
+/* Botões de antes/depois */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -110,29 +110,19 @@ img{
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Botão de próximo para a direita */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Hover para escurecer a seta */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
+/* Números indicadores */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -141,7 +131,7 @@ img{
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* Círculos indicadores */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -157,7 +147,7 @@ img{
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Fade ao passar imagens */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -193,24 +183,24 @@ img{
 .filmes_em_cartaz a{
   text-decoration: none;
 }
+
+/* Scrollbar */
 .filmes_em_cartaz::-webkit-scrollbar {
   width: 10px;
 }
-
 .filmes_em_cartaz::-webkit-scrollbar-track {
   background: grey;
   border-radius: 5px;
 }
-
 .filmes_em_cartaz::-webkit-scrollbar-thumb {
   background-color: rgb(63, 63, 63);
   border-radius: 5px;
 }
-
 .filmes_em_cartaz::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
+/* Criação de elemento before para ser ativo durante o hover */
 #filmes_cartaz::before{
   background-color: red;
   content: "";
@@ -236,7 +226,6 @@ img{
   opacity: 1;
   transition: .5s ease;
 }
-
 .nome_filme{
   position: absolute;
   color: white;
@@ -246,7 +235,6 @@ img{
   padding-top: 40%;
   opacity: 0;
 }
-
 #filmes_cartaz{
   border: 2px solid white;
   background-color: rgb(36, 32, 32);
@@ -258,7 +246,6 @@ img{
   height: 85%;
   margin-bottom: 3px;
 }
-
 #filmes_cartaz:hover{
   cursor: pointer;
 }
@@ -279,35 +266,31 @@ img{
   position: relative;
   margin: auto;
   margin-top: 40px;
-  background-color: rgb(0, 0, 0); /* Changed background color to black */
-  padding: 20px; /* Added padding for spacing */
-  border-radius: 8px; /* Added border-radius for rounded corners */
+  background-color: rgb(0, 0, 0); 
+  padding: 20px;
+  border-radius: 8px; 
 }
-
 .snack-bar h3 {
   color: white;
   font-size: 35px;
   text-align: center;
   margin-bottom: 20px;
 }
-
+/* Galeria de imagens do Snack */
 .snack-bar-imagens {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px; /* Added gap for spacing between images */
+  gap: 20px; 
 }
-
 #imagens_snack {
   background-color: rgb(36, 32, 32);
   border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
-
 #imagens_snack:hover {
   cursor: pointer;
 }
-
 #imagens_snack_img {
   width: 100%;
   height: 180px;
@@ -316,7 +299,6 @@ img{
   object-position: center;
   filter: brightness(0.8);
 }
-
 .legenda_snack {
   color: white;
   padding: 8px;
@@ -330,6 +312,7 @@ img{
   text-decoration: none;
 }
 
+/* Footer */
 footer{
   width: 100%;
   height: 200px;
@@ -351,6 +334,7 @@ footer{
 }
 .footer_nav a{
   color: white;
+  text-decoration: none;
 }
 .footer_nav ul li{
   padding: 4px;
@@ -375,6 +359,8 @@ footer{
   margin: 10px auto 10px auto;
   display: none;
 }
+
+/* Media queries para dispositivos menores */
 @media (max-width:1000px) {
   .checkbtn{
       display: inline;
